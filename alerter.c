@@ -2,10 +2,12 @@
 
 alerter_funcptr emailAlerter () {
   emailAlertCallCount = 1;
+  return 0;
 }
 
 alerter_funcptr ledAlerter () {
   ledAlertCallCount = 1;
+  return 0;
 }
 
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats computedStats) {
