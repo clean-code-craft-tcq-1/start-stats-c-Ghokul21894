@@ -10,8 +10,8 @@ void ledAlerter () {
 
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats computedStats) {
   if (maxThreshold > computedStats.max) {
-    emailAlerter();
-    ledAlerter();
+    alerters[0]();
+    alerters[1]();
     }
 }
     
