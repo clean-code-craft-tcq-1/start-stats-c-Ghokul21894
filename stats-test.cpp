@@ -29,7 +29,7 @@ TEST_CASE("average is NaN for empty array") {
 TEST_CASE("raises alerts when max is greater than threshold") {
     float numberset[] = {99.8, 34.2, 4.5};
     int setlength = sizeof(numberset) / sizeof(numberset[0]);
-    (void)Stats computedStats = compute_statistics(numberset, setlength);
+    Stats computedStats = compute_statistics(numberset, setlength);
     const float maxThreshold = 10.2;
     check_and_alert(maxThreshold, alerters, computedStats);
 
