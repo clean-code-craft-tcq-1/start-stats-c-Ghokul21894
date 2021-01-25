@@ -5,7 +5,12 @@ Stats compute_statistics(const float* numberset, int setlength) {
 	s.average = 0;
 	s.min = 0;
 	s.max = 0;
-
+	if ((numberset == 0)||(setlength == 0)) {
+		s.average = isnan(s.average/s.min);
+		s.min = isnan(s.average/s.min);
+		s.max = isnan(s.average/s.min);
+		return s;
+	}
 	for (int i = 0; i < setlength ; i++) {
 		s.average = s.average + numberset[i];
 	}
