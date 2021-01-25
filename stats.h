@@ -12,5 +12,5 @@ extern int ledAlertCallCount;
 Stats compute_statistics(const float* numberset, int setlength);
 void emailAlerter();
 void ledAlerter();
-extern alerter_funcptr alerters[] = {emailAlerter, ledAlerter};
+alerter_funcptr alerters[] = {emailAlerter, ledAlerter};
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats computedStats);
