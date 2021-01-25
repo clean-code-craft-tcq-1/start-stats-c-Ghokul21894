@@ -8,7 +8,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     for (int i = 0; i < setlength ; i++) {
         s.average = s.average + numberset[i];
     }
-    s.average=sum/setlength;
+    s.average = s.average / setlength;
     s.min = s.max = numberset[0];
     for (int i = 1 ; i < setlength ; i++) {
         if (s.min > numberset[i]) {
