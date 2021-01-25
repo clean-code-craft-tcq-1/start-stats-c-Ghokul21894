@@ -1,17 +1,17 @@
 #include "alerter.h"
 
-void emailAlerter () {
+alerter_funcptr emailAlerter () {
   emailAlertCallCount = 1;
 }
 
-void ledAlerter () {
+alerter_funcptr ledAlerter () {
   ledAlertCallCount = 1;
 }
 
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats computedStats) {
   if (maxThreshold > computedStats.max) {
-    (void) *alerters[0]();
-    (void) *alerters[1]();
+    *alerters[0]();
+    *alerters[1]();
     }
 }
     
