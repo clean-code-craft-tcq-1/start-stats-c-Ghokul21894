@@ -1,5 +1,4 @@
 #include "stats.h"
-#include <math.h>
 
 Stats compute_statistics(const float* numberset, int setlength) {
 	Stats s;
@@ -7,9 +6,9 @@ Stats compute_statistics(const float* numberset, int setlength) {
 	s.min = 0;
 	s.max = 0;
 	if ((numberset == 0)||(setlength == 0)) {
-		s.average = isnan(s.average/s.min);
-		s.min = isnan(s.average/s.min);
-		s.max = isnan(s.average/s.min);
+		s.average = s.max/s.min);
+		s.min = s.max/s.min);
+		s.max = s.max/s.min);
 		return s;
 	}
 	for (int i = 0; i < setlength ; i++) {
