@@ -3,11 +3,11 @@
 alerter_funcptr alerters[] = {emailAlerter, ledAlerter};
 
 void emailAlerter() {
-  emailAlertCallCount = 1;
+  emailAlertCallCount++;
 }
 
 void ledAlerter() {
-  ledAlertCallCount = 1;
+  ledAlertCallCount++;
 }
 
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats computedStats) {
